@@ -22,4 +22,15 @@ public:
 		}
 		return ans;
 	}
+
+	int missingNumber(std::vector<int>& nums) {
+		int ans = 0;
+		for (int i : nums) {
+			ans = ans ^ i;
+		}
+		for (int i = 0; i <= nums.size(); ++i) {
+			ans = ans ^ i;
+		}
+		return ans;
+	}
 };
